@@ -4,5 +4,8 @@
     <Compile Update="01view\UserWindowView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="01view\WelcomeWindowView.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

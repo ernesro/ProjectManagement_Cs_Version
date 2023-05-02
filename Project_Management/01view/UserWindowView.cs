@@ -51,7 +51,7 @@ namespace Project_Management._01view
             MapperFromView();
             if (loginWindowController.Login(email, password))
             {
-                MessageBox.Show("Login correcto");
+                new WelcomeWindowView().ShowDialog();
             }
             else { error2Lb.Visible = true; }
         }
