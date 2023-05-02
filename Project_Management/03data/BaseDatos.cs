@@ -15,7 +15,7 @@ namespace BaseDatos._03data
         // método que conecta con la BD
         static private MySqlConnection Conectar()
         {
-            string cad = "datasource=127.0.0.1; port=3306; username=root; password=; database=proyectoscs;";
+            string cad = "datasource=127.0.0.1; port=3306; username=root; password=; database=proyectosCs;";
             MySqlConnection conexionBD = new MySqlConnection(cad);
             return (conexionBD);
         }

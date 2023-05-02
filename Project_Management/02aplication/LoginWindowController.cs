@@ -14,12 +14,12 @@ namespace Project_Management._02aplication
     {
         public Employee Employee {get; set;}
         public LoginWindowController() { Employee = new Employee(); }
-        public bool IsValidEmail() 
+        public bool IsValidEmail(string email) 
         {
             try
             {
-                System.Net.Mail.MailAddress addr = new System.Net.Mail.MailAddress(Employee.Email);
-                return addr.Address == Employee.Email;
+                System.Net.Mail.MailAddress addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
             }
             catch { return false; }
         }
@@ -37,7 +37,7 @@ namespace Project_Management._02aplication
 
         private Employee GetByMailAndPasswd(string mail, string passwd)
         {
-            DataTable dt = BaseDatos.Consulta("select * from alumnos where email = '" + mail + "' and password = '" + passwd + "'");
+            DataTable dt = BaseDatos.Consulta("select * from employees where email = '" + mail + "' and password = '" + passwd + "'");
             if (dt != null && dt.Rows.Count > 0)
             {
                 Employee e = new Employee(Convert.ToInt32(dt.Rows[0]["cod"]), dt.Rows[0]["dni"].ToString(), dt.Rows[0]["name"].ToString(),

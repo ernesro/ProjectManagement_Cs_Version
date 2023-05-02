@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             loginBt = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            passwdTb = new TextBox();
+            emailTb = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            errorLb = new Label();
+            error2Lb = new Label();
             SuspendLayout();
             // 
             // loginBt
@@ -43,20 +45,22 @@
             loginBt.TabIndex = 0;
             loginBt.Text = "Login";
             loginBt.UseVisualStyleBackColor = true;
+            loginBt.Click += loginBt_Click;
             // 
-            // textBox1
+            // passwdTb
             // 
-            textBox1.Location = new Point(66, 235);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(334, 27);
-            textBox1.TabIndex = 1;
+            passwdTb.Location = new Point(66, 235);
+            passwdTb.Name = "passwdTb";
+            passwdTb.Size = new Size(334, 27);
+            passwdTb.TabIndex = 1;
             // 
-            // textBox2
+            // emailTb
             // 
-            textBox2.Location = new Point(66, 117);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(334, 27);
-            textBox2.TabIndex = 2;
+            emailTb.Location = new Point(66, 117);
+            emailTb.Name = "emailTb";
+            emailTb.Size = new Size(334, 27);
+            emailTb.TabIndex = 2;
+            emailTb.TextChanged += emailValidating;
             // 
             // label1
             // 
@@ -76,15 +80,40 @@
             label2.TabIndex = 4;
             label2.Text = "Password:";
             // 
+            // errorLb
+            // 
+            errorLb.AutoSize = true;
+            errorLb.BackColor = Color.Transparent;
+            errorLb.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            errorLb.ForeColor = Color.Red;
+            errorLb.Location = new Point(167, 405);
+            errorLb.Name = "errorLb";
+            errorLb.Size = new Size(125, 23);
+            errorLb.TabIndex = 5;
+            errorLb.Text = "Email is invalid.";
+            // 
+            // error2Lb
+            // 
+            error2Lb.AutoSize = true;
+            error2Lb.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            error2Lb.ForeColor = Color.Red;
+            error2Lb.Location = new Point(118, 428);
+            error2Lb.Name = "error2Lb";
+            error2Lb.Size = new Size(234, 23);
+            error2Lb.TabIndex = 6;
+            error2Lb.Text = "Email or Password are invalid.";
+            // 
             // UserWindowView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(465, 472);
+            Controls.Add(error2Lb);
+            Controls.Add(errorLb);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(emailTb);
+            Controls.Add(passwdTb);
             Controls.Add(loginBt);
             Name = "UserWindowView";
             Text = "UserWindowView";
@@ -95,9 +124,11 @@
         #endregion
 
         private Button loginBt;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox passwdTb;
+        private TextBox emailTb;
         private Label label1;
         private Label label2;
+        private Label errorLb;
+        private Label error2Lb;
     }
 }

@@ -124,6 +124,7 @@ INSERT INTO `employees` (`dni`, `name`, `lastName`, `phoneNumber`, `address`, `e
 ('12345678A', 'John', 'Doe', '123456789', '123 Main St', 'johndoe@email.com', 'true'),
 ('87654321B', 'Jane', 'Doe', '987654321', '456 Elm St', 'janedoe@email.com', 'false'),
 ('11111111C', 'Alice', 'Smith', '111111111', '789 Oak St', 'alice.smith@email.com', 'false'),
+('1', 'Bob', 'Johnson', '222222222', '321 Pine St', 'a', 'false'),
 ('22222222D', 'Bob', 'Johnson', '222222222', '321 Pine St', 'bob.johnson@email.com', 'false');
 
 
