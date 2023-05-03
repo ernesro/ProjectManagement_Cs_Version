@@ -10,18 +10,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace Project_Management._02aplication
 {
     using BaseDatos._03data;
+    using System.Text.RegularExpressions;
+
     internal class LoginWindowController
     {
         public Employee Employee {get; set;}
         public LoginWindowController() { Employee = new Employee(); }
         public bool IsValidEmail(string email) 
         {
-            try
-            {
-                System.Net.Mail.MailAddress addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch { return false; }
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, pattern);
         }
 
         public bool Login(string email, string password)

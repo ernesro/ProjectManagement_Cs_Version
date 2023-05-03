@@ -16,5 +16,47 @@ namespace Project_Management._01view
         {
             InitializeComponent();
         }
+
+        private void employeesBt_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new EmployeeView().ShowDialog();
+            Show();
+        }
+
+        private void teamsBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projectsBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commentsBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tasksBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assignEmployeeBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assignTaskBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

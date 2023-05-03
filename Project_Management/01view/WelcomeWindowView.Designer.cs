@@ -30,13 +30,13 @@
         {
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            tasksBt = new Button();
+            teamsBt = new Button();
+            projectsBt = new Button();
+            employeesBt = new Button();
+            commentsBt = new Button();
+            assignEmployeeBt = new Button();
+            assignTaskBt = new Button();
             button8 = new Button();
             SuspendLayout();
             // 
@@ -60,77 +60,85 @@
             label2.TabIndex = 1;
             label2.Text = "MANAGEMENT";
             // 
-            // button1
+            // tasksBt
             // 
-            button1.Location = new Point(814, 354);
-            button1.Name = "button1";
-            button1.Size = new Size(219, 40);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            tasksBt.Location = new Point(878, 354);
+            tasksBt.Name = "tasksBt";
+            tasksBt.Size = new Size(155, 40);
+            tasksBt.TabIndex = 2;
+            tasksBt.Text = "Tasks";
+            tasksBt.UseVisualStyleBackColor = true;
+            tasksBt.Click += tasksBt_Click;
             // 
-            // button2
+            // teamsBt
             // 
-            button2.Location = new Point(291, 354);
-            button2.Name = "button2";
-            button2.Size = new Size(219, 40);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            teamsBt.Location = new Point(252, 354);
+            teamsBt.Name = "teamsBt";
+            teamsBt.Size = new Size(155, 40);
+            teamsBt.TabIndex = 3;
+            teamsBt.Text = "Teams";
+            teamsBt.UseVisualStyleBackColor = true;
+            teamsBt.Click += teamsBt_Click;
             // 
-            // button3
+            // projectsBt
             // 
-            button3.Location = new Point(554, 354);
-            button3.Name = "button3";
-            button3.Size = new Size(219, 40);
-            button3.TabIndex = 4;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            projectsBt.Location = new Point(463, 354);
+            projectsBt.Name = "projectsBt";
+            projectsBt.Size = new Size(155, 40);
+            projectsBt.TabIndex = 4;
+            projectsBt.Text = "Projects";
+            projectsBt.UseVisualStyleBackColor = true;
+            projectsBt.Click += projectsBt_Click;
             // 
-            // button4
+            // employeesBt
             // 
-            button4.Location = new Point(30, 354);
-            button4.Name = "button4";
-            button4.Size = new Size(219, 40);
-            button4.TabIndex = 5;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            employeesBt.Location = new Point(30, 354);
+            employeesBt.Name = "employeesBt";
+            employeesBt.Size = new Size(155, 40);
+            employeesBt.TabIndex = 5;
+            employeesBt.Text = "Employees";
+            employeesBt.UseVisualStyleBackColor = true;
+            employeesBt.Click += employeesBt_Click;
             // 
-            // button5
+            // commentsBt
             // 
-            button5.Location = new Point(30, 422);
-            button5.Name = "button5";
-            button5.Size = new Size(219, 40);
-            button5.TabIndex = 6;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            commentsBt.Location = new Point(670, 354);
+            commentsBt.Name = "commentsBt";
+            commentsBt.Size = new Size(155, 40);
+            commentsBt.TabIndex = 6;
+            commentsBt.Text = "Comments";
+            commentsBt.UseVisualStyleBackColor = true;
+            commentsBt.Click += commentsBt_Click;
             // 
-            // button6
+            // assignEmployeeBt
             // 
-            button6.Location = new Point(291, 422);
-            button6.Name = "button6";
-            button6.Size = new Size(219, 40);
-            button6.TabIndex = 7;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            assignEmployeeBt.Location = new Point(30, 486);
+            assignEmployeeBt.Name = "assignEmployeeBt";
+            assignEmployeeBt.Size = new Size(283, 40);
+            assignEmployeeBt.TabIndex = 7;
+            assignEmployeeBt.Text = "Assign an Employee to a Team";
+            assignEmployeeBt.UseVisualStyleBackColor = true;
+            assignEmployeeBt.Click += assignEmployeeBt_Click;
             // 
-            // button7
+            // assignTaskBt
             // 
-            button7.Location = new Point(554, 422);
-            button7.Name = "button7";
-            button7.Size = new Size(219, 40);
-            button7.TabIndex = 8;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            assignTaskBt.Location = new Point(389, 486);
+            assignTaskBt.Name = "assignTaskBt";
+            assignTaskBt.Size = new Size(286, 40);
+            assignTaskBt.TabIndex = 8;
+            assignTaskBt.Text = "Assign a task to an Employee";
+            assignTaskBt.UseVisualStyleBackColor = true;
+            assignTaskBt.Click += assignTaskBt_Click;
             // 
             // button8
             // 
-            button8.Location = new Point(814, 422);
+            button8.Location = new Point(755, 486);
             button8.Name = "button8";
-            button8.Size = new Size(219, 40);
+            button8.Size = new Size(278, 40);
             button8.TabIndex = 9;
-            button8.Text = "button8";
+            button8.Text = "Assign a Project to a Team";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // WelcomeWindowView
             // 
@@ -138,13 +146,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 573);
             Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(assignTaskBt);
+            Controls.Add(assignEmployeeBt);
+            Controls.Add(commentsBt);
+            Controls.Add(employeesBt);
+            Controls.Add(projectsBt);
+            Controls.Add(teamsBt);
+            Controls.Add(tasksBt);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "WelcomeWindowView";
@@ -157,13 +165,13 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button tasksBt;
+        private Button teamsBt;
+        private Button projectsBt;
+        private Button employeesBt;
+        private Button commentsBt;
+        private Button assignEmployeeBt;
+        private Button assignTaskBt;
         private Button button8;
     }
 }

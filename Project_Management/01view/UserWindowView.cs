@@ -23,6 +23,7 @@ namespace Project_Management._01view
             loginWindowController = new LoginWindowController();
             errorLb.Visible = false;
             error2Lb.Visible = false;
+            passwdTb.UseSystemPasswordChar = true;
         }
 
         public void MapperFromView()
@@ -31,7 +32,7 @@ namespace Project_Management._01view
             password = passwdTb.Text;
         }
 
-        private void emailValidating(object sender, EventArgs e)
+        private void EmailValidating(object sender, EventArgs e)
         {
             MapperFromView();
             if (!loginWindowController.IsValidEmail(email))
@@ -46,14 +47,23 @@ namespace Project_Management._01view
             }
         }
 
-        private void loginBt_Click(object sender, EventArgs e)
+        private void LoginBt_Click(object sender, EventArgs e)
         {
             MapperFromView();
             if (loginWindowController.Login(email, password))
             {
+                ClearTb();
+                Hide();
                 new WelcomeWindowView().ShowDialog();
+                Show();
             }
             else { error2Lb.Visible = true; }
+        }
+
+        private void ClearTb()
+        {
+            emailTb.Text = "";
+            passwdTb.Text = "";
         }
     }
 }

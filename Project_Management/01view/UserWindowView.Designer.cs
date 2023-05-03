@@ -45,7 +45,7 @@
             loginBt.TabIndex = 0;
             loginBt.Text = "Login";
             loginBt.UseVisualStyleBackColor = true;
-            loginBt.Click += loginBt_Click;
+            loginBt.Click += LoginBt_Click;
             // 
             // passwdTb
             // 
@@ -60,7 +60,7 @@
             emailTb.Name = "emailTb";
             emailTb.Size = new Size(334, 27);
             emailTb.TabIndex = 2;
-            emailTb.TextChanged += emailValidating;
+            emailTb.TextChanged += EmailValidating;
             // 
             // label1
             // 
