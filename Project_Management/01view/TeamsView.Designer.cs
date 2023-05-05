@@ -207,26 +207,14 @@
         private DataGridView dataGridView1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
         private TextBox codTb;
         private TextBox nameTb;
-        private TextBox lNameTb;
-        private TextBox adressTb;
-        private TextBox emailTb;
-        private Button adminBt;
-        private Button UserBt;
         private Button addBt;
         private Button deleteBt;
         private Button updateBt;
         private Button searchBtCodeBt;
         private Button showAllBt;
         private Button searchByName;
-        private TextBox phoneTb;
-        private Label label8;
-        private Label adminLb;
         private Label codeLb;
         private Label label9;
     }

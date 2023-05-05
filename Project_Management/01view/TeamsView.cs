@@ -27,8 +27,6 @@ namespace Project_Management._01view
         private void Teams_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = teamsController.GetTeams("SELECT * FROM teams");
-            if (admin == "false")
-                dataGridView1.Columns[dataGridView1.Columns.Count - 2].Visible = false;
             teamsController.Team = teamsController.GetTeams("SELECT * FROM teams")[0];
             MapperFromData();
         }
