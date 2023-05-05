@@ -41,14 +41,14 @@
             lNameTb = new TextBox();
             adressTb = new TextBox();
             emailTb = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            adminBt = new Button();
+            UserBt = new Button();
+            addUserBt = new Button();
+            deleteUserBt = new Button();
+            updateUserBt = new Button();
+            searchBtDniBt = new Button();
+            showAllBt = new Button();
+            searchByName = new Button();
             phoneTb = new TextBox();
             label8 = new Label();
             adminLb = new Label();
@@ -72,7 +72,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(951, 714);
+            dataGridView1.Size = new Size(1185, 714);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellClick += dataGridView1_CellContentClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -166,77 +166,85 @@
             emailTb.Size = new Size(341, 27);
             emailTb.TabIndex = 12;
             // 
-            // button1
+            // adminBt
             // 
-            button1.Location = new Point(185, 440);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 29);
-            button1.TabIndex = 13;
-            button1.Text = "Make Admin";
-            button1.UseVisualStyleBackColor = true;
+            adminBt.Location = new Point(185, 440);
+            adminBt.Name = "adminBt";
+            adminBt.Size = new Size(138, 29);
+            adminBt.TabIndex = 13;
+            adminBt.Text = "Make Admin";
+            adminBt.UseVisualStyleBackColor = true;
+            adminBt.Click += adminBt_Click;
             // 
-            // button2
+            // UserBt
             // 
-            button2.Location = new Point(356, 440);
-            button2.Name = "button2";
-            button2.Size = new Size(138, 29);
-            button2.TabIndex = 14;
-            button2.Text = "Make User";
-            button2.UseVisualStyleBackColor = true;
+            UserBt.Location = new Point(356, 440);
+            UserBt.Name = "UserBt";
+            UserBt.Size = new Size(138, 29);
+            UserBt.TabIndex = 14;
+            UserBt.Text = "Make User";
+            UserBt.UseVisualStyleBackColor = true;
+            UserBt.Click += UserBt_Click;
             // 
-            // button3
+            // addUserBt
             // 
-            button3.Location = new Point(12, 510);
-            button3.Name = "button3";
-            button3.Size = new Size(140, 29);
-            button3.TabIndex = 15;
-            button3.Text = "Add User";
-            button3.UseVisualStyleBackColor = true;
+            addUserBt.Location = new Point(12, 510);
+            addUserBt.Name = "addUserBt";
+            addUserBt.Size = new Size(140, 29);
+            addUserBt.TabIndex = 15;
+            addUserBt.Text = "Add User";
+            addUserBt.UseVisualStyleBackColor = true;
+            addUserBt.Click += addUserBt_Click;
             // 
-            // button4
+            // deleteUserBt
             // 
-            button4.Location = new Point(354, 510);
-            button4.Name = "button4";
-            button4.Size = new Size(140, 29);
-            button4.TabIndex = 16;
-            button4.Text = "Delete User";
-            button4.UseVisualStyleBackColor = true;
+            deleteUserBt.Location = new Point(354, 510);
+            deleteUserBt.Name = "deleteUserBt";
+            deleteUserBt.Size = new Size(140, 29);
+            deleteUserBt.TabIndex = 16;
+            deleteUserBt.Text = "Delete User";
+            deleteUserBt.UseVisualStyleBackColor = true;
+            deleteUserBt.Click += deleteUserBt_Click;
             // 
-            // button5
+            // updateUserBt
             // 
-            button5.Location = new Point(185, 510);
-            button5.Name = "button5";
-            button5.Size = new Size(140, 29);
-            button5.TabIndex = 17;
-            button5.Text = "Update User";
-            button5.UseVisualStyleBackColor = true;
+            updateUserBt.Location = new Point(185, 510);
+            updateUserBt.Name = "updateUserBt";
+            updateUserBt.Size = new Size(140, 29);
+            updateUserBt.TabIndex = 17;
+            updateUserBt.Text = "Update User";
+            updateUserBt.UseVisualStyleBackColor = true;
+            updateUserBt.Click += updateUserBt_Click;
             // 
-            // button6
+            // searchBtDniBt
             // 
-            button6.Location = new Point(12, 612);
-            button6.Name = "button6";
-            button6.Size = new Size(140, 29);
-            button6.TabIndex = 18;
-            button6.Text = "Search By Dni";
-            button6.UseVisualStyleBackColor = true;
+            searchBtDniBt.Location = new Point(12, 612);
+            searchBtDniBt.Name = "searchBtDniBt";
+            searchBtDniBt.Size = new Size(140, 29);
+            searchBtDniBt.TabIndex = 18;
+            searchBtDniBt.Text = "Search By Dni";
+            searchBtDniBt.UseVisualStyleBackColor = true;
+            searchBtDniBt.Click += searchBtDniBt_Click;
             // 
-            // button7
+            // showAllBt
             // 
-            button7.Location = new Point(354, 612);
-            button7.Name = "button7";
-            button7.Size = new Size(140, 29);
-            button7.TabIndex = 19;
-            button7.Text = "Show All";
-            button7.UseVisualStyleBackColor = true;
+            showAllBt.Location = new Point(354, 612);
+            showAllBt.Name = "showAllBt";
+            showAllBt.Size = new Size(140, 29);
+            showAllBt.TabIndex = 19;
+            showAllBt.Text = "Show All";
+            showAllBt.UseVisualStyleBackColor = true;
+            showAllBt.Click += showAllBt_Click;
             // 
-            // button8
+            // searchByName
             // 
-            button8.Location = new Point(183, 612);
-            button8.Name = "button8";
-            button8.Size = new Size(140, 29);
-            button8.TabIndex = 20;
-            button8.Text = "Search By Name";
-            button8.UseVisualStyleBackColor = true;
+            searchByName.Location = new Point(183, 612);
+            searchByName.Name = "searchByName";
+            searchByName.Size = new Size(140, 29);
+            searchByName.TabIndex = 20;
+            searchByName.Text = "Search By Name";
+            searchByName.UseVisualStyleBackColor = true;
+            searchByName.Click += searchByName_Click;
             // 
             // phoneTb
             // 
@@ -266,18 +274,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1481, 735);
+            ClientSize = new Size(1715, 735);
             Controls.Add(adminLb);
             Controls.Add(phoneTb);
             Controls.Add(label8);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(searchByName);
+            Controls.Add(showAllBt);
+            Controls.Add(searchBtDniBt);
+            Controls.Add(updateUserBt);
+            Controls.Add(deleteUserBt);
+            Controls.Add(addUserBt);
+            Controls.Add(UserBt);
+            Controls.Add(adminBt);
             Controls.Add(emailTb);
             Controls.Add(adressTb);
             Controls.Add(lNameTb);
@@ -314,14 +322,14 @@
         private TextBox lNameTb;
         private TextBox adressTb;
         private TextBox emailTb;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button adminBt;
+        private Button UserBt;
+        private Button addUserBt;
+        private Button deleteUserBt;
+        private Button updateUserBt;
+        private Button searchBtDniBt;
+        private Button showAllBt;
+        private Button searchByName;
         private TextBox phoneTb;
         private Label label8;
         private Label adminLb;

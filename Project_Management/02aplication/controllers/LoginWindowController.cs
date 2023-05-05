@@ -33,7 +33,7 @@ namespace Project_Management._02aplication
             return false;
         }
 
-        private Employee GetByMailAndPasswd(string mail, string passwd)
+        public Employee GetByMailAndPasswd(string mail, string passwd)
         {
             DataTable dt = BaseDatos.Consulta("select * from employees where email = '" + mail + "' and password = '" + passwd + "'");
             if (dt != null && dt.Rows.Count > 0)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_Management._02aplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +13,25 @@ namespace Project_Management._01view
 {
     public partial class WelcomeWindowView : Form
     {
-        public WelcomeWindowView()
+        string admin;
+        public WelcomeWindowView(string admin)
         {
             InitializeComponent();
+            this.admin = admin;
         }
 
         private void employeesBt_Click(object sender, EventArgs e)
         {
             Hide();
-            new EmployeeView().ShowDialog();
+            new EmployeeView(admin).ShowDialog();
             Show();
         }
 
         private void teamsBt_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new TeamsView(admin).ShowDialog();
+            Show();
         }
 
         private void projectsBt_Click(object sender, EventArgs e)
@@ -58,5 +63,6 @@ namespace Project_Management._01view
         {
 
         }
+        
     }
 }

@@ -50,11 +50,12 @@ namespace Project_Management._01view
         private void LoginBt_Click(object sender, EventArgs e)
         {
             MapperFromView();
-            if (loginWindowController.Login(email, password))
+            if (loginWindowController.Login(email, password) == true)
             {
+                string admin = loginWindowController.GetByMailAndPasswd(email, password).Admin;
                 ClearTb();
                 Hide();
-                new WelcomeWindowView().ShowDialog();
+                new WelcomeWindowView(admin).ShowDialog();
                 Show();
             }
             else { error2Lb.Visible = true; }

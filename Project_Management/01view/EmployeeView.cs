@@ -11,18 +11,26 @@ using System.Windows.Forms;
 
 namespace Project_Management._01view
 {
+    using BaseDatos._03data;
+    using Project_Management._02aplication.objects;
+
     public partial class EmployeeView : Form
     {
-        private EmployeesController employeesController = new EmployeesController();
-        public EmployeeView()
+        private readonly string admin;
+        private readonly EmployeesController employeesController = new();
+        public EmployeeView(string admin)
         {
             InitializeComponent();
+            this.admin = admin;
+            EnableButtons();
         }
 
         private void Employees_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = employeesController.GetEmployees("SELECT * FROM employees");
             dataGridView1.Columns[dataGridView1.Columns.Count - 1].Visible = false;
+            if (admin == "false")
+                dataGridView1.Columns[dataGridView1.Columns.Count - 2].Visible = false;
             employeesController.employee = employeesController.GetEmployees("SELECT * FROM employees")[0];
             MapperFromData();
 
@@ -57,6 +65,98 @@ namespace Project_Management._01view
             emailTb.Text = employeesController.employee.Email;
             phoneTb.Text = employeesController.employee.PhoneNumber;
             adminLb.Text = employeesController.employee.Admin;
+        }
+        public void MapperToData()
+        {
+            employeesController.employee.Dni = dniTb.Text;
+            employeesController.employee.Name = nameTb.Text;
+            employeesController.employee.LastName = lNameTb.Text;
+            employeesController.employee.Address = adressTb.Text;
+            employeesController.employee.Email = emailTb.Text;
+            employeesController.employee.PhoneNumber = phoneTb.Text;
+            employeesController.employee.Admin = adminLb.Text;
+        }
+
+        private void adminBt_Click(object sender, EventArgs e) { adminLb.Text = "true"; }
+        private void UserBt_Click(object sender, EventArgs e) { adminLb.Text = "false"; }
+
+        private void searchBtDniBt_Click(object sender, EventArgs e)
+        {
+            List<Employee> employees = employeesController.GetEmployees("SELECT * FROM employees WHERE dni = '" + dniTb.Text + "'");
+            if (employees.Count > 0)
+            {
+                dataGridView1.DataSource = employees;
+                employeesController.employee = employees[0];
+                MapperFromData();
+            }
+        }
+
+        private void showAllBt_Click(object sender, EventArgs e) { Employees_Load(sender, e); }
+
+        private void searchByName_Click(object sender, EventArgs e)
+        {
+            List<Employee> employees = employeesController.GetEmployees("SELECT * FROM employees WHERE name = '" + nameTb.Text + "'");
+            if (employees.Count > 0)
+            {
+                dataGridView1.DataSource = employees;
+                employeesController.employee = employees[0];
+                MapperFromData();
+            }
+        }
+
+        private void addUserBt_Click(object sender, EventArgs e)
+        {
+            MapperToData();
+            int ok = employeesController.InsertEmployee();
+            if (ok > 0)
+            {
+                MessageBox.Show("Se ha insertado correctamente");
+                Employees_Load(sender, e);
+            }
+            else
+                Alert.ErrorAlert();
+        }
+
+        private void updateUserBt_Click(object sender, EventArgs e)
+        {
+            MapperToData();
+            int ok = employeesController.UpdateEmployee();
+            if (ok > 0)
+            {
+                MessageBox.Show("Se ha actualizado correctamente");
+                Employees_Load(sender, e);
+            }
+            else
+                MessageBox.Show("No se ha podido actualizar");
+        }
+
+        private void deleteUserBt_Click(object sender, EventArgs e)
+        {
+            MapperToData();
+            int ok = employeesController.DeleteEmployee();
+            if (ok > 0)
+            {
+                MessageBox.Show("Se ha eliminado correctamente");
+                Employees_Load(sender, e);
+            }
+            else
+                MessageBox.Show("No se ha podido eliminar");
+        }
+
+        public void EnableButtons()
+        {
+            bool isAdmin;
+            if (admin == "false")
+                isAdmin = false;
+            else
+                isAdmin = true;
+            addUserBt.Enabled = isAdmin;
+            deleteUserBt.Enabled = isAdmin;
+            updateUserBt.Enabled = isAdmin;
+            adminBt.Enabled = isAdmin;
+            UserBt.Enabled = isAdmin;
+            adminLb.Visible = isAdmin;
+
         }
     }
 }
