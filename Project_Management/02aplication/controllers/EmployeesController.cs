@@ -13,6 +13,8 @@ namespace Project_Management._02aplication
         public Employee employee { get; set; }
         public EmployeesController() { employee = new Employee(); }
 
+        public string Error() { return BaseDatos.Error; }
+
         public List<Employee> GetEmployees(string sql) 
         {
             List<Employee> list = new List<Employee>();

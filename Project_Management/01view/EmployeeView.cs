@@ -114,7 +114,7 @@ namespace Project_Management._01view
                 Employees_Load(sender, e);
             }
             else
-                Alert.ErrorAlert();
+                Alert.ErrorAlert(employeesController.Error());
         }
 
         private void updateUserBt_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace Project_Management._01view
                 Employees_Load(sender, e);
             }
             else
-                MessageBox.Show("No se ha podido actualizar");
+                MessageBox.Show(employeesController.Error());
         }
 
         private void deleteUserBt_Click(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace Project_Management._01view
                 Employees_Load(sender, e);
             }
             else
-                MessageBox.Show("No se ha podido eliminar");
+                MessageBox.Show(employeesController.Error());
         }
 
         public void EnableButtons()

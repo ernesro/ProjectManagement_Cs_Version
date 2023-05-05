@@ -8,9 +8,9 @@ namespace Project_Management._02aplication.objects
 {
     internal static class Alert
     {
-        public static void ErrorAlert() 
+        public static void ErrorAlert(string error = "Error when performing the operation") 
         {
-            MessageBox.Show("Error al realizar la operación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void SuccesAlert()
