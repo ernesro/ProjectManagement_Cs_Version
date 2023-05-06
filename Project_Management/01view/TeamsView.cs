@@ -113,5 +113,18 @@ namespace Project_Management._01view
                 deleteBt.Enabled = false;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                teamsController.Team = new Team(
+                                       Convert.ToInt32(row.Cells["Code"].Value),
+                                      row.Cells["name"].Value.ToString()
+                                      );
+                MapperFromData();
+            }
+        }
     }
 }

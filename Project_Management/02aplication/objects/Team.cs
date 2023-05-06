@@ -8,7 +8,7 @@ namespace Project_Management._02aplication
 {
     internal class Team
     {
-        public int Code { get; }
+        public int Code { get; set; }
         public string Name { get; set; }
 
         public Team() { }
