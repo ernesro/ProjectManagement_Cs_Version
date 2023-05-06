@@ -36,7 +36,9 @@ namespace Project_Management._01view
 
         private void projectsBt_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new ProjectView(admin).ShowDialog();
+            Show();
         }
 
         private void commentsBt_Click(object sender, EventArgs e)
