@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project_Management._02aplication.objects
 {
-    internal class Comments
+    internal class Comment
     {
         public int Code { get; set; }
         public int TaskCod { get; set; }
         public string Content { get; set; }
-        public Comments() { }
-        public Comments(int code, int taskCod, string content) 
+        public Comment() { }
+        public Comment(int code, int taskCod, string content) 
         {
             Code = code;
             TaskCod = taskCod;

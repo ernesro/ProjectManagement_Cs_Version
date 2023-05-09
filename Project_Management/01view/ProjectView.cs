@@ -16,7 +16,7 @@ namespace Project_Management._01view
     public partial class ProjectView : Form
     {
         ProjectController projectController = new();
-        private string admin;
+        private readonly string admin;
         public ProjectView(string admin)
         {
             InitializeComponent();

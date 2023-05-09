@@ -14,7 +14,7 @@ namespace Project_Management._02aplication.controllers
     {
         public Comment Comment { get; set; }
         public CommentsController() { Comment = new(); }
-        public List<Comment> GetProjects(string sql)
+        public List<Comment> GetComments(string sql)
         {
             List<Comment> list = new List<Comment>();
             DataTable dt = BaseDatos.Consulta(sql);
@@ -40,7 +40,7 @@ namespace Project_Management._02aplication.controllers
             string sql = "select * from comments where cod = '" + Comment.Code + "'";
             if (BaseDatos.Consulta(sql).Rows.Count > 0)
             {
-                sql = "update comments set cod_task = '" + Comment.TaskCod + "', content = '" + Comment.Content + "'";
+                sql = "update comments set cod_task = '" + Comment.TaskCod + "', content = '" + Comment.Content + "' where cod = '" + Comment.Code + "'";
                 return (BaseDatos.Modificacion(sql));
             }
             return -1;
