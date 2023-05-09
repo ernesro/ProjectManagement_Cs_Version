@@ -71,6 +71,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(1185, 714);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // label2
             // 
@@ -152,6 +153,7 @@
             showAllBt.TabIndex = 19;
             showAllBt.Text = "Show All";
             showAllBt.UseVisualStyleBackColor = true;
+            showAllBt.Click += showAllBt_Click;
             // 
             // searchByName
             // 
@@ -159,8 +161,9 @@
             searchByName.Name = "searchByName";
             searchByName.Size = new Size(140, 29);
             searchByName.TabIndex = 20;
-            searchByName.Text = "Search By Name";
+            searchByName.Text = "Search By title";
             searchByName.UseVisualStyleBackColor = true;
+            searchByName.Click += searchByName_Click;
             // 
             // codeLb
             // 
@@ -221,6 +224,7 @@
             progressBt.TabIndex = 28;
             progressBt.Text = "Set in progress";
             progressBt.UseVisualStyleBackColor = true;
+            progressBt.Click += progressBt_Click;
             // 
             // completedBt
             // 
@@ -230,6 +234,7 @@
             completedBt.TabIndex = 29;
             completedBt.Text = "Set completed";
             completedBt.UseVisualStyleBackColor = true;
+            completedBt.Click += completedBt_Click;
             // 
             // holdBt
             // 
@@ -239,6 +244,7 @@
             holdBt.TabIndex = 30;
             holdBt.Text = "Set on hold";
             holdBt.UseVisualStyleBackColor = true;
+            holdBt.Click += onHoldBt_Click;
             // 
             // ProjectView
             // 
