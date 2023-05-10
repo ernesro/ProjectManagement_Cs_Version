@@ -23,8 +23,8 @@ namespace Project_Management._02aplication.controllers
             {
                 list.Add(new Task_(int.Parse(dt.Rows[i]["cod"].ToString()),
                                    int.Parse(dt.Rows[i]["cod_proyect"].ToString()),
-                                   dt.Rows[i]["title"].ToString(),
                                    dt.Rows[i]["description"].ToString(),
+                                    dt.Rows[i]["title"].ToString(),
                                    dt.Rows[i]["state"].ToString()));
             }
             return (list);

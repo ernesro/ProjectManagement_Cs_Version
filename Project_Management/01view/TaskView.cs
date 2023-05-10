@@ -40,8 +40,8 @@ namespace Project_Management._01view
         {
             codeLb.Text = tasksController.Task.Code.ToString();
             projectLb.Text = tasksController.Task.ProjectCod.ToString();
-            titleTb.Text = tasksController.Task.Title;
-            descriptionTb.Text = tasksController.Task.Description;
+            titleTb.Text = tasksController.Task.Description;
+            descriptionTb.Text = tasksController.Task.Title;
             stateLb.Text = tasksController.Task.State;
         }
         private void MapperToData()
@@ -103,15 +103,9 @@ namespace Project_Management._01view
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
-                string columnName = dataGridView1.Columns[row.Cells[1].ColumnIndex].HeaderText;
-                MessageBox.Show("Título de la columna: " + dataGridView1.Columns[row.Cells[0].ColumnIndex].HeaderText+ dataGridView1.Columns[row.Cells[1].ColumnIndex].HeaderText
-                    + dataGridView1.Columns[row.Cells[2].ColumnIndex].HeaderText + dataGridView1.Columns[row.Cells[3].ColumnIndex].HeaderText);
-
-
                 tasksController.Task = new Task_(
                                        Convert.ToInt32(row.Cells["Code"].Value),
-                                       Convert.ToInt32(row.Cells["Code"].Value),
+                                       Convert.ToInt32(row.Cells["ProjectCod"].Value),
                                        row.Cells["title"].Value.ToString(),
                                        row.Cells["description"].Value.ToString(),
                                        row.Cells["state"].Value.ToString());
