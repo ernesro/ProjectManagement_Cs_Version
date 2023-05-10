@@ -50,7 +50,9 @@ namespace Project_Management._01view
 
         private void tasksBt_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new TaskView(admin).ShowDialog();
+            Show();
         }
 
         private void assignEmployeeBt_Click(object sender, EventArgs e)

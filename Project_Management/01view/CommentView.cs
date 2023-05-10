@@ -20,6 +20,7 @@ namespace Project_Management._01view
         {
             InitializeComponent();
             this.admin = admin;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             enableButtos();
         }
 
@@ -90,16 +91,12 @@ namespace Project_Management._01view
                 Alert.ErrorAlert();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-               
-                    string columnName = dataGridView1.Columns[row.Cells[1].ColumnIndex].HeaderText;
-                    MessageBox.Show("Título de la columna: " + columnName);
-                
-                commentsController.Comment = new Comment(
+               DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+               commentsController.Comment = new Comment(
                                        Convert.ToInt32(row.Cells["code"].Value),
                                        Convert.ToInt32(row.Cells["TaskCod"].Value),
                                        row.Cells["Content"].Value.ToString());

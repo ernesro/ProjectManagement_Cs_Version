@@ -10,6 +10,9 @@
     <Compile Update="01view\ProjectView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="01view\TaskView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="01view\TeamsView.cs">
       <SubType>Form</SubType>
     </Compile>
