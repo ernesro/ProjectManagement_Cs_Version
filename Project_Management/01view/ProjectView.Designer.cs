@@ -273,7 +273,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "ProjectView";
-            Text = "ProjectView";
+            Text = "Projects";
             Load += ProjectView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

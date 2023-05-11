@@ -1,6 +1,6 @@
 ﻿namespace Project_Management._01view
 {
-    partial class AssignEmployeeView
+    partial class AssignTeamView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            employeesGrid = new DataGridView();
+            projectsGrid = new DataGridView();
             teamGrid = new DataGridView();
             assignGrid = new DataGridView();
             label1 = new Label();
@@ -39,23 +39,23 @@
             allBt = new Button();
             byEmployeeBt = new Button();
             byTeamBt = new Button();
-            employeeTb = new TextBox();
+            projectTb = new TextBox();
             teamTb = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)employeesGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)projectsGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)teamGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)assignGrid).BeginInit();
             SuspendLayout();
             // 
-            // employeesGrid
+            // projectsGrid
             // 
-            employeesGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            employeesGrid.Location = new Point(393, 12);
-            employeesGrid.Name = "employeesGrid";
-            employeesGrid.RowHeadersWidth = 51;
-            employeesGrid.RowTemplate.Height = 29;
-            employeesGrid.Size = new Size(467, 695);
-            employeesGrid.TabIndex = 0;
-            employeesGrid.CellClick += EmployeesGrid_CellClick;
+            projectsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            projectsGrid.Location = new Point(393, 12);
+            projectsGrid.Name = "projectsGrid";
+            projectsGrid.RowHeadersWidth = 51;
+            projectsGrid.RowTemplate.Height = 29;
+            projectsGrid.Size = new Size(467, 695);
+            projectsGrid.TabIndex = 0;
+            projectsGrid.CellClick += EmployeesGrid_CellClick;
             // 
             // teamGrid
             // 
@@ -83,18 +83,18 @@
             label1.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(12, 21);
             label1.Name = "label1";
-            label1.Size = new Size(326, 40);
+            label1.Size = new Size(241, 40);
             label1.TabIndex = 3;
-            label1.Text = "Assign Employee";
+            label1.Text = "Assign Team";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(12, 157);
             label2.Name = "label2";
-            label2.Size = new Size(114, 20);
+            label2.Size = new Size(97, 20);
             label2.TabIndex = 4;
-            label2.Text = "Employee Code";
+            label2.Text = "Proyect Code";
             // 
             // label3
             // 
@@ -141,7 +141,7 @@
             byEmployeeBt.Name = "byEmployeeBt";
             byEmployeeBt.Size = new Size(162, 29);
             byEmployeeBt.TabIndex = 9;
-            byEmployeeBt.Text = "Search by Employee";
+            byEmployeeBt.Text = "Search by Proyect";
             byEmployeeBt.UseVisualStyleBackColor = true;
             byEmployeeBt.Click += ByEmployeeBt_Click;
             // 
@@ -155,12 +155,12 @@
             byTeamBt.UseVisualStyleBackColor = true;
             byTeamBt.Click += ByTeamBt_Click;
             // 
-            // employeeTb
+            // projectTb
             // 
-            employeeTb.Location = new Point(143, 154);
-            employeeTb.Name = "employeeTb";
-            employeeTb.Size = new Size(235, 27);
-            employeeTb.TabIndex = 11;
+            projectTb.Location = new Point(143, 154);
+            projectTb.Name = "projectTb";
+            projectTb.Size = new Size(235, 27);
+            projectTb.TabIndex = 11;
             // 
             // teamTb
             // 
@@ -169,13 +169,13 @@
             teamTb.Size = new Size(235, 27);
             teamTb.TabIndex = 12;
             // 
-            // AssignEmployeeView
+            // AssignTeamView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1759, 719);
             Controls.Add(teamTb);
-            Controls.Add(employeeTb);
+            Controls.Add(projectTb);
             Controls.Add(byTeamBt);
             Controls.Add(byEmployeeBt);
             Controls.Add(allBt);
@@ -186,11 +186,11 @@
             Controls.Add(label1);
             Controls.Add(assignGrid);
             Controls.Add(teamGrid);
-            Controls.Add(employeesGrid);
-            Name = "AssignEmployeeView";
-            Text = "Assign Employee";
+            Controls.Add(projectsGrid);
+            Name = "AssignTeamView";
+            Text = "Assign Team";
             Load += AssignEmployeeView_Load;
-            ((System.ComponentModel.ISupportInitialize)employeesGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)projectsGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)teamGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)assignGrid).EndInit();
             ResumeLayout(false);
@@ -199,7 +199,7 @@
 
         #endregion
 
-        private DataGridView employeesGrid;
+        private DataGridView projectsGrid;
         private DataGridView teamGrid;
         private DataGridView assignGrid;
         private Label label1;
@@ -210,7 +210,7 @@
         private Button allBt;
         private Button byEmployeeBt;
         private Button byTeamBt;
-        private TextBox employeeTb;
+        private TextBox projectTb;
         private TextBox teamTb;
     }
 }

@@ -156,7 +156,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "WelcomeWindowView";
-            Text = "WelcomeWindowView";
+            Text = "Projest Management";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Project_Management._01view
 {
-    partial class AssignEmployeeView
+    partial class AssignTaskView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             employeesGrid = new DataGridView();
-            teamGrid = new DataGridView();
+            tasksGrid = new DataGridView();
             assignGrid = new DataGridView();
             label1 = new Label();
             label2 = new Label();
@@ -38,11 +38,11 @@
             deleteBt = new Button();
             allBt = new Button();
             byEmployeeBt = new Button();
-            byTeamBt = new Button();
+            byTaskTb = new Button();
             employeeTb = new TextBox();
-            teamTb = new TextBox();
+            taskTb = new TextBox();
             ((System.ComponentModel.ISupportInitialize)employeesGrid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)teamGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tasksGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)assignGrid).BeginInit();
             SuspendLayout();
             // 
@@ -57,15 +57,15 @@
             employeesGrid.TabIndex = 0;
             employeesGrid.CellClick += EmployeesGrid_CellClick;
             // 
-            // teamGrid
+            // tasksGrid
             // 
-            teamGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            teamGrid.Location = new Point(1278, 12);
-            teamGrid.Name = "teamGrid";
-            teamGrid.RowHeadersWidth = 51;
-            teamGrid.Size = new Size(469, 695);
-            teamGrid.TabIndex = 1;
-            teamGrid.CellClick += TeamGrid_CellClick;
+            tasksGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tasksGrid.Location = new Point(1278, 12);
+            tasksGrid.Name = "tasksGrid";
+            tasksGrid.RowHeadersWidth = 51;
+            tasksGrid.Size = new Size(469, 695);
+            tasksGrid.TabIndex = 1;
+            tasksGrid.CellClick += TaskGrid_CellClick;
             // 
             // assignGrid
             // 
@@ -83,9 +83,9 @@
             label1.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(12, 21);
             label1.Name = "label1";
-            label1.Size = new Size(326, 40);
+            label1.Size = new Size(238, 40);
             label1.TabIndex = 3;
-            label1.Text = "Assign Employee";
+            label1.Text = "Assign Task";
             // 
             // label2
             // 
@@ -101,9 +101,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(12, 224);
             label3.Name = "label3";
-            label3.Size = new Size(84, 20);
+            label3.Size = new Size(75, 20);
             label3.TabIndex = 5;
-            label3.Text = "Team Code";
+            label3.Text = "Task Code";
             // 
             // addBt
             // 
@@ -145,15 +145,15 @@
             byEmployeeBt.UseVisualStyleBackColor = true;
             byEmployeeBt.Click += ByEmployeeBt_Click;
             // 
-            // byTeamBt
+            // byTaskTb
             // 
-            byTeamBt.Location = new Point(216, 573);
-            byTeamBt.Name = "byTeamBt";
-            byTeamBt.Size = new Size(162, 29);
-            byTeamBt.TabIndex = 10;
-            byTeamBt.Text = "Search by Team";
-            byTeamBt.UseVisualStyleBackColor = true;
-            byTeamBt.Click += ByTeamBt_Click;
+            byTaskTb.Location = new Point(216, 573);
+            byTaskTb.Name = "byTaskTb";
+            byTaskTb.Size = new Size(162, 29);
+            byTaskTb.TabIndex = 10;
+            byTaskTb.Text = "Search by Task";
+            byTaskTb.UseVisualStyleBackColor = true;
+            byTaskTb.Click += ByTaskBt_Click;
             // 
             // employeeTb
             // 
@@ -162,21 +162,21 @@
             employeeTb.Size = new Size(235, 27);
             employeeTb.TabIndex = 11;
             // 
-            // teamTb
+            // taskTb
             // 
-            teamTb.Location = new Point(143, 221);
-            teamTb.Name = "teamTb";
-            teamTb.Size = new Size(235, 27);
-            teamTb.TabIndex = 12;
+            taskTb.Location = new Point(143, 221);
+            taskTb.Name = "taskTb";
+            taskTb.Size = new Size(235, 27);
+            taskTb.TabIndex = 12;
             // 
-            // AssignEmployeeView
+            // AssignTaskView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1759, 719);
-            Controls.Add(teamTb);
+            Controls.Add(taskTb);
             Controls.Add(employeeTb);
-            Controls.Add(byTeamBt);
+            Controls.Add(byTaskTb);
             Controls.Add(byEmployeeBt);
             Controls.Add(allBt);
             Controls.Add(deleteBt);
@@ -185,13 +185,13 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(assignGrid);
-            Controls.Add(teamGrid);
+            Controls.Add(tasksGrid);
             Controls.Add(employeesGrid);
-            Name = "AssignEmployeeView";
-            Text = "Assign Employee";
+            Name = "AssignTaskView";
+            Text = "Assign Task";
             Load += AssignEmployeeView_Load;
             ((System.ComponentModel.ISupportInitialize)employeesGrid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)teamGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tasksGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)assignGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -200,7 +200,7 @@
         #endregion
 
         private DataGridView employeesGrid;
-        private DataGridView teamGrid;
+        private DataGridView tasksGrid;
         private DataGridView assignGrid;
         private Label label1;
         private Label label2;
@@ -209,8 +209,8 @@
         private Button deleteBt;
         private Button allBt;
         private Button byEmployeeBt;
-        private Button byTeamBt;
+        private Button byTaskTb;
         private TextBox employeeTb;
-        private TextBox teamTb;
+        private TextBox taskTb;
     }
 }

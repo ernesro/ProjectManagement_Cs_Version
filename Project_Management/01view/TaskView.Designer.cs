@@ -313,7 +313,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "TaskView";
-            Text = "TaskView";
+            Text = "Tasks";
             Load += TaskView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

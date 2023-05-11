@@ -116,7 +116,7 @@
             Controls.Add(passwdTb);
             Controls.Add(loginBt);
             Name = "UserWindowView";
-            Text = "UserWindowView";
+            Text = "Login";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -95,11 +95,11 @@ namespace Project_Management._01view
         {
             if (e.RowIndex >= 0)
             {
-               DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-               commentsController.Comment = new Comment(
-                                       Convert.ToInt32(row.Cells["code"].Value),
-                                       Convert.ToInt32(row.Cells["TaskCod"].Value),
-                                       row.Cells["Content"].Value.ToString());
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                commentsController.Comment = new Comment(
+                                        Convert.ToInt32(row.Cells["code"].Value),
+                                        Convert.ToInt32(row.Cells["TaskCod"].Value),
+                                        row.Cells["Content"].Value.ToString());
                 MapperFromData();
             }
         }

@@ -27,7 +27,7 @@ namespace Project_Management._01view
 
         private void enableButtos()
         {
-            if (admin != "true") 
+            if (admin != "true")
             {
                 addBt.Enabled = false;
                 deleteBt.Enabled = false;

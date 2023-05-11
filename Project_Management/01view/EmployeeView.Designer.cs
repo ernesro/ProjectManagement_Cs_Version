@@ -300,7 +300,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "EmployeeView";
-            Text = "EmployeeView";
+            Text = "Employees";
             Load += Employees_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

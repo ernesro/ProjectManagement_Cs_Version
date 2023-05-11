@@ -38,3 +38,5 @@ C:\Users\Ernesto\Desktop\Projecto\CsGestionApp\ProjectManagement_Cs_Version\Proj
 C:\Users\Ernesto\Desktop\Projecto\CsGestionApp\ProjectManagement_Cs_Version\Project_Management\obj\Debug\net6.0-windows\Project_Management._01view.CommentView.resources
 C:\Users\Ernesto\Desktop\Projecto\CsGestionApp\ProjectManagement_Cs_Version\Project_Management\obj\Debug\net6.0-windows\Project_Management._01view.TaskView.resources
 C:\Users\Ernesto\Desktop\Projecto\CsGestionApp\ProjectManagement_Cs_Version\Project_Management\obj\Debug\net6.0-windows\Project_Management._01view.AssignEmployeeView.resources
+C:\Users\Ernesto\Desktop\Projecto\CsGestionApp\ProjectManagement_Cs_Version\Project_Management\obj\Debug\net6.0-windows\Project_Management._01view.AssignTaskView.resources
+C:\Users\Ernesto\Desktop\Projecto\CsGestionApp\ProjectManagement_Cs_Version\Project_Management\obj\Debug\net6.0-windows\Project_Management._01view.AssignTeamView.resources

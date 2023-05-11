@@ -196,7 +196,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "TeamsView";
-            Text = "EmployeeView";
+            Text = "Teams";
             Load += Teams_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

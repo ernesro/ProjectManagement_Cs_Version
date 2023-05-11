@@ -64,13 +64,17 @@ namespace Project_Management._01view
 
         private void assignTaskBt_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new AssignTaskView(admin).ShowDialog();
+            Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new AssignTeamView(admin).ShowDialog();
+            Show();
         }
-        
+
     }
 }

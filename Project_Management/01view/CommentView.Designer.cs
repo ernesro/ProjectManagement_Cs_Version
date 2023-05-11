@@ -220,7 +220,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "CommentView";
-            Text = "CommentView";
+            Text = "Comments";
             Load += CommentView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
