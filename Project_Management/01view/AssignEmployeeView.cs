@@ -65,7 +65,7 @@ namespace Project_Management._01view
             assignEmployeeController.TeamController.Team = assignEmployeeController.TeamController.GetTeams("SELECT * FROM teams WHERE cod = '" + teamTb.Text + "'")[0];
         }
 
-        private void addBt_Click(object sender, EventArgs e)
+        private void AddBt_Click(object sender, EventArgs e)
         {
             MapperToData();
             int ok = assignEmployeeController.Insert();
@@ -78,7 +78,7 @@ namespace Project_Management._01view
                 Alert.ErrorAlert();
         }
 
-        private void byEmployeeBt_Click(object sender, EventArgs e)
+        private void ByEmployeeBt_Click(object sender, EventArgs e)
         {
             List<Employee> list = new List<Employee>();
             list = assignEmployeeController.EmployeeController.GetEmployees("SELECT * FROM employees WHERE cod ='" + employeeTb.Text + "'");
@@ -87,7 +87,7 @@ namespace Project_Management._01view
             MapperFromData();
         }
 
-        private void byTeamBt_Click(object sender, EventArgs e)
+        private void ByTeamBt_Click(object sender, EventArgs e)
         {
             List<Team> list = new List<Team>();
             list = assignEmployeeController.TeamController.GetTeams("SELECT * FROM teams WHERE cod ='" + teamTb.Text + "'");
@@ -101,39 +101,39 @@ namespace Project_Management._01view
             AssignEmployeeView_Load(sender, e);
         }
 
-        private void assignGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void AssignGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = assignGrid.Rows[e.RowIndex];
                 employeeTb.Text = row.Cells["employeecod"].Value.ToString();
-                byEmployeeBt_Click(sender, e);
+                ByEmployeeBt_Click(sender, e);
                 teamTb.Text = row.Cells["taskcod"].Value.ToString();
-                byTeamBt_Click(sender, e);
+                ByTeamBt_Click(sender, e);
             }
         }
 
-        private void employeesGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void EmployeesGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = assignGrid.Rows[e.RowIndex];
-                employeeTb.Text = row.Cells["employeecod"].Value.ToString();
-                byEmployeeBt_Click(sender, e);
+                DataGridViewRow row = employeesGrid.Rows[e.RowIndex];
+                employeeTb.Text = row.Cells["cod"].Value.ToString();
+                ByEmployeeBt_Click(sender, e);
             }
         }
 
-        private void teamGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void TeamGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = assignGrid.Rows[e.RowIndex];
-                teamTb.Text = row.Cells["taskcod"].Value.ToString();
-                byTeamBt_Click(sender, e);
+                DataGridViewRow row = teamGrid.Rows[e.RowIndex];
+                teamTb.Text = row.Cells["code"].Value.ToString();
+                ByTeamBt_Click(sender, e);
             }
         }
 
-        private void deleteBt_Click(object sender, EventArgs e)
+        private void DeleteBt_Click(object sender, EventArgs e)
         {
             MapperToData();
             int ok = assignEmployeeController.Delete();

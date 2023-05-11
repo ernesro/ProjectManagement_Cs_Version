@@ -55,7 +55,7 @@
             employeesGrid.RowTemplate.Height = 29;
             employeesGrid.Size = new Size(467, 695);
             employeesGrid.TabIndex = 0;
-            employeesGrid.CellClick += employeesGrid_CellClick;
+            employeesGrid.CellClick += EmployeesGrid_CellClick;
             // 
             // teamGrid
             // 
@@ -65,7 +65,7 @@
             teamGrid.RowHeadersWidth = 51;
             teamGrid.Size = new Size(469, 695);
             teamGrid.TabIndex = 1;
-            teamGrid.CellClick += teamGrid_CellClick;
+            teamGrid.CellClick += TeamGrid_CellClick;
             // 
             // assignGrid
             // 
@@ -75,7 +75,7 @@
             assignGrid.RowHeadersWidth = 51;
             assignGrid.Size = new Size(300, 695);
             assignGrid.TabIndex = 2;
-            assignGrid.CellClick += assignGrid_CellClick;
+            assignGrid.CellClick += AssignGrid_CellClick;
             // 
             // label1
             // 
@@ -113,7 +113,7 @@
             addBt.TabIndex = 6;
             addBt.Text = "Add";
             addBt.UseVisualStyleBackColor = true;
-            addBt.Click += addBt_Click;
+            addBt.Click += AddBt_Click;
             // 
             // deleteBt
             // 
@@ -123,7 +123,7 @@
             deleteBt.TabIndex = 7;
             deleteBt.Text = "Delete";
             deleteBt.UseVisualStyleBackColor = true;
-            deleteBt.Click += deleteBt_Click;
+            deleteBt.Click += DeleteBt_Click;
             // 
             // allBt
             // 
@@ -143,7 +143,7 @@
             byEmployeeBt.TabIndex = 9;
             byEmployeeBt.Text = "Search by Employee";
             byEmployeeBt.UseVisualStyleBackColor = true;
-            byEmployeeBt.Click += byEmployeeBt_Click;
+            byEmployeeBt.Click += ByEmployeeBt_Click;
             // 
             // byTeamBt
             // 
@@ -153,7 +153,7 @@
             byTeamBt.TabIndex = 10;
             byTeamBt.Text = "Search by Team";
             byTeamBt.UseVisualStyleBackColor = true;
-            byTeamBt.Click += byTeamBt_Click;
+            byTeamBt.Click += ByTeamBt_Click;
             // 
             // employeeTb
             // 
