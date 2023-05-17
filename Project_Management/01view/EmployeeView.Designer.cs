@@ -137,6 +137,7 @@
             dniTb.Name = "dniTb";
             dniTb.Size = new Size(341, 27);
             dniTb.TabIndex = 8;
+            dniTb.TextChanged += ValidateDniButton_Click;
             // 
             // nameTb
             // 

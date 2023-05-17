@@ -13,6 +13,7 @@ namespace Project_Management._01view
 {
     using BaseDatos._03data;
     using Project_Management._02aplication.objects;
+    using System.Text.RegularExpressions;
 
     public partial class EmployeeView : Form
     {
@@ -157,6 +158,37 @@ namespace Project_Management._01view
             UserBt.Enabled = isAdmin;
             adminLb.Visible = isAdmin;
 
+        }
+
+        private bool IsValidDni(string dni)
+        {
+            // Expresión regular para validar el DNI
+            string pattern = @"^\d{8}[A-HJ-NP-TV-Z]$";
+            Regex regex = new Regex(pattern);
+
+            return regex.IsMatch(dni);
+        }
+
+        private void ValidateDniButton_Click(object sender, EventArgs e)
+        {
+            if (admin == "true")
+            {
+                string dni = dniTb.Text;
+                if (!IsValidDni(dni))
+                {
+                    dniTb.BackColor = System.Drawing.Color.Red;
+                    addUserBt.Enabled = false;
+                    updateUserBt.Enabled = false;
+                    deleteUserBt.Enabled = false;
+                }
+                else
+                {
+                    dniTb.BackColor = System.Drawing.Color.White;
+                    addUserBt.Enabled = true;
+                    updateUserBt.Enabled = true;
+                    deleteUserBt.Enabled = true;
+                }
+            }
         }
     }
 }
