@@ -1,4 +1,5 @@
 ﻿using Project_Management._02aplication;
+using Project_Management._02aplication.objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Project_Management._01view
         public WelcomeWindowView(string admin)
         {
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             this.admin = admin;
         }
 

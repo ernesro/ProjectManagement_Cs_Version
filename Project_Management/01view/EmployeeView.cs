@@ -21,6 +21,7 @@ namespace Project_Management._01view
         private readonly EmployeesController employeesController = new();
         public EmployeeView(string admin)
         {
+            WindowStyler.ApplyCustomStyle(this);
             InitializeComponent();
             this.admin = admin;
             EnableButtons();
@@ -169,26 +170,59 @@ namespace Project_Management._01view
             return regex.IsMatch(dni);
         }
 
-        private void ValidateDniButton_Click(object sender, EventArgs e)
+        private bool IsValidEmail(string email)
         {
+            // Expresión regular para validar el email
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            Regex regex = new Regex(pattern);
+
+            return regex.IsMatch(email);
+        }
+
+        private bool IsValidPhone(string phone)
+        {
+            // Expresión regular para validar el número de teléfono
+            string pattern = @"^\d{9}$";
+            Regex regex = new Regex(pattern);
+
+            return regex.IsMatch(phone);
+        }
+
+        private void ValidateTextBox(object sender, EventArgs e)
+        {
+            string dni = dniTb.Text;
+            string phone = phoneTb.Text;
+            string email = emailTb.Text;
             if (admin == "true")
             {
-                string dni = dniTb.Text;
-                if (!IsValidDni(dni))
+                if (!IsValidDni(dni) || !IsValidEmail(email) || !IsValidPhone(phone))
                 {
-                    dniTb.BackColor = System.Drawing.Color.Red;
                     addUserBt.Enabled = false;
                     updateUserBt.Enabled = false;
                     deleteUserBt.Enabled = false;
                 }
                 else
                 {
-                    dniTb.BackColor = System.Drawing.Color.White;
                     addUserBt.Enabled = true;
                     updateUserBt.Enabled = true;
                     deleteUserBt.Enabled = true;
                 }
             }
+
+            if (!IsValidDni(dni))
+                dniTb.BackColor = System.Drawing.Color.Red;
+            else
+                dniTb.BackColor = System.Drawing.Color.White;
+
+            if (!IsValidEmail(email))
+                emailTb.BackColor = System.Drawing.Color.Red;
+            else
+                emailTb.BackColor = System.Drawing.Color.White;
+
+            if (!IsValidPhone(phone))
+                phoneTb.BackColor = System.Drawing.Color.Red;
+            else
+                phoneTb.BackColor = System.Drawing.Color.White;
         }
     }
 }

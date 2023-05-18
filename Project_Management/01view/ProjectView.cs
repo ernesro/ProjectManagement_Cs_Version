@@ -20,6 +20,7 @@ namespace Project_Management._01view
         public ProjectView(string admin)
         {
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.admin = admin;
             enableButtos();

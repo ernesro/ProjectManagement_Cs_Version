@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectView));
             label1 = new Label();
             dataGridView1 = new DataGridView();
             label2 = new Label();
@@ -272,6 +273,7 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ProjectView";
             Text = "Projects";
             Load += ProjectView_Load;

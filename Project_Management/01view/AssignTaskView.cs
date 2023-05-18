@@ -21,6 +21,7 @@ namespace Project_Management._01view
         public AssignTaskView(string admin)
         {
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             this.admin = admin;
             EnableButtons();
             employeesGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;

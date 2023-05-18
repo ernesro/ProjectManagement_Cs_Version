@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserWindowView));
             loginBt = new Button();
             passwdTb = new TextBox();
             emailTb = new TextBox();
@@ -115,6 +116,7 @@
             Controls.Add(emailTb);
             Controls.Add(passwdTb);
             Controls.Add(loginBt);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "UserWindowView";
             Text = "Login";
             ResumeLayout(false);

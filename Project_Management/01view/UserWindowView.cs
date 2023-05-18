@@ -1,4 +1,5 @@
 ﻿using Project_Management._02aplication;
+using Project_Management._02aplication.objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,7 @@ namespace Project_Management._01view
         public UserWindowView()
         {
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             loginWindowController = new LoginWindowController();
             errorLb.Visible = false;
             error2Lb.Visible = false;

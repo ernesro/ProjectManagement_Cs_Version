@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeView));
             label1 = new Label();
             dataGridView1 = new DataGridView();
             label2 = new Label();
@@ -137,7 +138,7 @@
             dniTb.Name = "dniTb";
             dniTb.Size = new Size(341, 27);
             dniTb.TabIndex = 8;
-            dniTb.TextChanged += ValidateDniButton_Click;
+            dniTb.TextChanged += ValidateTextBox;
             // 
             // nameTb
             // 
@@ -166,6 +167,8 @@
             emailTb.Name = "emailTb";
             emailTb.Size = new Size(341, 27);
             emailTb.TabIndex = 12;
+            emailTb.TextAlignChanged += ValidateTextBox;
+            emailTb.TextChanged += ValidateTextBox;
             // 
             // adminBt
             // 
@@ -253,6 +256,7 @@
             phoneTb.Name = "phoneTb";
             phoneTb.Size = new Size(341, 27);
             phoneTb.TabIndex = 22;
+            phoneTb.TextChanged += ValidateTextBox;
             // 
             // label8
             // 
@@ -300,6 +304,7 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EmployeeView";
             Text = "Employees";
             Load += Employees_Load;

@@ -19,6 +19,7 @@ namespace Project_Management._01view
         public TaskView(string admin)
         {
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.admin = admin;
             EnableButtos();

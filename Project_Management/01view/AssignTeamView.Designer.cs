@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssignTeamView));
             projectsGrid = new DataGridView();
             teamGrid = new DataGridView();
             assignGrid = new DataGridView();
@@ -187,6 +188,7 @@
             Controls.Add(assignGrid);
             Controls.Add(teamGrid);
             Controls.Add(projectsGrid);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AssignTeamView";
             Text = "Assign Team";
             Load += AssignEmployeeView_Load;

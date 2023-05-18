@@ -21,6 +21,7 @@ namespace Project_Management._01view
         {
             this.admin = admin;
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             EnableButtons();
         }
 

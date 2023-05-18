@@ -19,6 +19,7 @@ namespace Project_Management._01view
         public CommentView(string admin)
         {
             InitializeComponent();
+            WindowStyler.ApplyCustomStyle(this);
             this.admin = admin;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             enableButtos();
